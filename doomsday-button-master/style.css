@@ -1,0 +1,210 @@
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0px 0px 10px 3px rgba(255, 0, 0, 0.4),
+      0 0 0 8px #D6D5DB,
+      0 0 0 18px #96989E;
+  }
+
+
+  25%,
+  75% {
+    box-shadow:
+      0px 0px 10px 8px rgba(255, 0, 0, 0.8),
+      0 0 0 8px #D6D5DB,
+      0 0 0 18px #96989E;
+  }
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    background-image: radial-gradient(ellipse at center, #ff0505 10%, #960910 85%, #960910 85%);
+  }
+
+  10%,
+  90% {
+    background-image: radial-gradient(ellipse at center, #ff0505 20%, #960910 85%, #960910 85%);
+  }
+
+  20%,
+  80% {
+    background-image: radial-gradient(ellipse at center, #ff0505 30%, #960910 85%, #960910 85%);
+  }
+
+  30%,
+  70% {
+    background-image: radial-gradient(ellipse at center, #ff0505 40%, #960910 85%, #960910 85%);
+  }
+
+  40%,
+  60% {
+    background-image: radial-gradient(ellipse at center, #ff0505 50%, #960910 85%, #960910 85%);
+  }
+
+  50% {
+    background-image: radial-gradient(ellipse at center, #ff0505 60%, #960910 85%, #960910 85%);
+  }
+}
+
+@keyframes implode {
+  0% {
+    transform: scale(1);
+  }
+
+  20%,
+  40% {
+    transform: scale(10);
+  }
+
+  60%,
+  80% {
+    transform: scale(0.01);
+  }
+
+  80% {
+    transform: scale(0.01);
+    opacity: 1;
+    background: transparent;
+    /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); */
+  }
+
+  100% {
+    transform: scale(0.01);
+    opacity: 0;
+    background: rgba;
+    /* box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.0); */
+  }
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+	
+}
+.doomsday {
+	
+  animation: pulse 2s infinite backwards;
+
+    
+    
+}
+
+
+
+.doomsday:hover {
+ animation: shake 0.72s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+
+
+.doomsday:hover span 
+{
+    display:none
+}
+
+.doomsday:hover:before
+{
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+ content:"WARNING";
+font-size: 14px;
+color: skyblue;
+	
+ }
+
+
+    
+.doomsday:hover {
+  transform: translateY(7px);
+  animation-name: wave, implode;
+  animation-duration: 0.1s, 8s;
+  animation-iteration-count: infinite, 1;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: backwards, forwards;
+}
+
+
+.doomsday:active:after
+{    
+content:"Explode";
+font-size: 1rem;
+color: black;
+}
+    
+
+
+@keyframes pop {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+}
+	@keyframes pop {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+}
+
+.coffee {
+  animation: pop 1s linear infinite forwards;
+}
+
+	@keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-100px); }
+        100% { transform: translateY(0); }
+    }
+	
+	
+.coffee:hover:before
+{
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+ content:"Happy:)";
+font-size: 1.5rem;
+color: skyblue;
+ }
+
+.coffee {
+}
+
+.coffee:hover {
+    animation: wave 0.5s infinite;
+}
+
+.coffee:active {
+   animation-name: wave, jump;
+  animation-duration: 0.2s, 1.6s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s, 1.6s;
+}
+
